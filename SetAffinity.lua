@@ -32,19 +32,8 @@ _addon.author = 'Nattack (nattakorps@gmail.com)'
 _addon.version = '1.0'
 _addon.commands = {'setaffinity'}
 
-local config = require('config')
-local tables = require('tables')
-
-local defaults = T{}
-defaults.affinitymask = 0x01
-defaults.polname = "pol"
-local settings = config.load(defaults)
-
 windower.register_event('load', function(...)
     --powershell -command "start-process powershell -verb runas -argumentlist '(get-process pol).processoraffinity=1'" 
-    --windower.execute('powershell', argument)
-    --windower.execute('powershell -command "start-process powershell -verb runas -argumentlist \'(get-process pol).processoraffinity=1\'"')
-    --windower.execute('powershell -command \"start-process powershell -verb runas -argumentlist \'(get-process pol).processaffinity=1\'\"')
     windower.execute(windower.addon_path..'affinity.bat')
 end)
 

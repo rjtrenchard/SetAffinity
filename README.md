@@ -1,7 +1,7 @@
 SetAffinity
 ---
 A small one-liner that sets pol.exe to a single core.
-Useful if you notice stuttering on multi-core CPU's, and want it automatically set.
+Useful if you notice stuttering on multi-core CPU's and want it automatically set.
 
 Requires admin access without dimming UAC, or Windower to be run as an administrator.
 
